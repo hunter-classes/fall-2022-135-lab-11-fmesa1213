@@ -1,5 +1,5 @@
 #include<iostream>
-#include "social.h"
+#include "profile.h"
 using namespace std;
 
 int main() {

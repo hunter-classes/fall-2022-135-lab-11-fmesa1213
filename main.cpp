@@ -1,5 +1,6 @@
 #include<iostream>
 #include "profile.h"
+#include <profile.cpp>
 using namespace std;
 
 int main() {

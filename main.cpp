@@ -35,3 +35,29 @@ int main() {
   cout << nw.addUser("yoshi", "Yoshi") << endl;     // false (0)
 }
 
+int main()
+{
+Network nw;
+nw.addUser("mario", "Mario");
+nw.addUser("luigi", "Luigi");
+nw.addUser("yoshi", "Yoshi");
+
+nw.follow("mario", "luigi");
+nw.follow("mario", "yoshi");
+nw.follow("luigi", "mario");
+nw.follow("luigi", "yoshi");
+nw.follow("yoshi", "mario");
+nw.follow("yoshi", "luigi");
+
+nw.addUser("wario", "Wario");
+
+for (int i = 2; i < 6; i++) {
+string usrn = "mario" + to_string(i);
+string dspn = "Mario " + to_string(i);
+nw.addUser(usrn, dspn);
+nw.follow(usrn, "mario");
+}
+nw.follow("mario2", "luigi");
+
+nw.printDot();
+}
